@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+     <h1>Drug detail</h1>
+    	
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content">
+     <div align="center"><p><b>Pralidoxime, 2-PAM</b></p></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+       <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;รักษาภาวะเป็นพิษเฉียบพลันจากสารกำจัดแมลงกลุ่มออร์กาโนฟอสฟอรัส</p>
+			</div></ul>
+            <div data-role="collapsible" >
+        <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;1. แพ้ยากลุ่ม oximes<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;2. ภาวะเป็นพิษเฉียบพลันจากสารกำจัดแมลงกลุ่มคาร์บาเมตไม่ใช่ข้อห้ามสมบูรณ์ (absolute contraindication)
+			</p>
+</div></ul>
+            <div data-role="collapsible" >
+       <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        <ul data-role="listview"  >
+        	<p>เวียนศีรษะ ตาพร่ามัว ความดันโลหิตสูง</p>
+        	</div></ul>
+            <div data-role="collapsible" >
+        <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        <ul data-role="listview"  >
+        	<p>ไม่มีปฏิกิริยาต่อยาอื่นที่สำคัญ</p>
+        	  </div></ul>
+              <div data-role="collapsible" >        
+       <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;Loading dose: 1–2 กรัม IV drip ใน 30-60 นาที<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Maintenance dose: 500-1000 มิลลิกรัม/ชั่วโมง (10-20 มิลลิกรัม/กิโลกรัม/ชั่วโมง) IV
+            </p>
+            </div></ul>
+            <div data-role="collapsible" >
+       <h2>รูปแบบของยา (Formulation)</h2>
+        <ul data-role="listview"  >
+        	<p>พราลิดอกซีมเป็นผงบรรจุในขวดเล็ก ขนาดขวดละ 1 กรัม</p>
+        	</div></ul>
+
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Pralidoxime, 2-PAM',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+</body>
+</html>

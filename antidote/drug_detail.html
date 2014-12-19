@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Deatil</title>
+
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"s"></script>
+</head>
+<body>
+
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+		<h1 >Detail Page</h1>
+			<a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a href="#" data-icon="star" data-inline="true" class="ui-btn-right" id="fav">Favorite</a>
+		</div>
+
+		<div data-role="content">
+     		<b><div align="center" id='headers'></div></b>
+			<li><b><p>ข้อบ่งใช้ (Indications)</p></b>
+			<div id='inc'></div>
+			</li>
+			<li><b><p>ข้อห้ามใช้ (Contraindications)</p></b>
+			</li>
+			<div id='cont'></div>
+			<li><b><p>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</p></b>
+			</li>
+			<div id='ads'></div>
+			<li><b><p>ปฏิกิริยาต่อยาอื่น (Drug interaction)</p></b>
+			</li>
+			<div id='int'></div>
+			<li><b><p>ขนาดและวิธีใช้ (Dosage and administrations)</p></b>
+			</li>
+
+			<div id='dose'></div>
+			<li><b><p>รูปแบบของยา (Formulation)</p></b>
+			</li>
+			<div id='drugform'></div>
+			<li><b><p>คำนวณ(Calculator)</p></b>
+			</li>
+			<div id='cal'>
+			</div>
+		</div>
+	</div>
+	<script>
+		function getURLParameter(name) {
+			return decodeURIComponent(
+				(location.search.match(RegExp("[?|&]" + name + '=(.+?)(&|$)')) || [, null])[1]
+			);
+		}
+		$.ajax({
+			url: "http://antidote.thaidatahosting.com/Slim/index.php/details/" + getURLParameter('ID'),
+			dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+			success: function(data) {
+				for (var i = 0; i < data.length; i++) {
+					$('#headers').text( data[i].drug_name )
+					$('#inc').append('<p>' + data[i].drug_indicate.replace(/\n/g, "<br />") + '</p>');
+					$('#cont').append('<p>' + data[i].drug_contrain.replace(/\n/g, "<br />") + '</p>');
+					$('#ads').append('<p>' + data[i].drug_adverse.replace(/\n/g, "<br />") + '</p>');
+					$('#int').append('<p>' + data[i].drug_interact.replace(/\n/g, "<br />") + '</p>');
+					$('#dose').append('<p>' + data[i].drug_dosage.replace(/\n/g, "<br />") + '</p>');
+					$('#drugform').append('<p>' + data[i].drug_formulate.replace(/\n/g, "<br />") + '</p>');
+					$('#cal').append(data[i].drug_calc);
+				}
+				$("#drugList").listview('refresh')
+			},
+			error: function() {
+				alert("Error");
+			}
+		});
+		$('#fav').click(function() {
+			localStorage.setItem("favDrug" + getURLParameter('ID'), getURLParameter('ID'));
+		});
+	
+	</script>
+</body>
+
+</html>

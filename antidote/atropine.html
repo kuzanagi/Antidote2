@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+    	<h1>Drug detail</h1>
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a> <!--ใส่ id fav-->
+    </div>
+    
+    <div data-role="content" align="left">
+    <div align="center"><p><b>Atropine</p></b></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+       <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>1. รักษาภาวะเป็นพิษเฉียบพลันจากสารกำจัดแมลงกลุ่มออร์กาโนฟอสฟอรัสและคาร์บาเมต เฉพาะส่วนที่เกิดจากฤทธิ์ที่เป็น muscarinic cholinergic
+			<br>2. หัวใจเต้นช้า (bradycardia)
+			<br>3. ภาวะหัวใจหยุดนิ่ง (asystole)
+			<br>4. หลอดลมตีบ (bronchospasm)
+             </div></ul>
+              <div data-role="collapsible" >
+       <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        	<p>1. แพ้ยาอะโทรปีน
+			<br>2. โรคต้อหินชนิดมุมแคบ (narrow-angle glaucoma)</p>
+             </div></ul>
+             <div data-role="collapsible" >
+       <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        	<p>ปากแห้ง ตาพร่ามัว ปัสสาวะลำบาก เพิ่มความดันลูกตาและไข้</p>
+             </div></ul>
+             <div data-role="collapsible" >
+        <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        	<p>ไม่มีปฏิกิริยาต่อยาอื่นที่สำคัญ</p>
+             </div></ul>
+             <div data-role="collapsible" >
+       <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        	<p>&nbsp;&nbsp;&nbsp;Loading dose: 1.8 มิลลิกรัม IV และเพิ่มขึ้นเท่าตัวจนกว่าการตอบสนองถึงเป้าหมาย
+            	<br>&nbsp;&nbsp;&nbsp;Maintenance dose: 10-20% ของ loading dose IV drip ต่อชั่วโมง
+            </p>
+             </div></ul>
+             <div data-role="collapsible" >
+        <h2>รูปแบบของยา (Formulation)</h2>
+        	<p>สารละลายอะโทรปีนขนาดหลอดละ 0.6 มิลลิกรัม</p>
+             </div></ul>
+
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Atropine',location.pathname.substring(location.pathname.lastIndexOf("/") + 1));
+		});
+		</script>
+</body>
+</html>

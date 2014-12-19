@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page"  >
+	<div data-role="header" data-position="fixed">
+    <h1>Drug detail</h1>
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content" >
+     <div align="center"><p><b>Diphtheria Antitoxin (DAT)</b></p></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+        <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>รักษาผู้ป่วยโรคคอตีบ</p>
+			</div></ul>
+            <div data-role="collapsible" >
+       <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        <ul data-role="listview"  >
+        	<p>ไม่มี</p>
+            </div></ul>
+            <div data-role="collapsible" >
+      <h2>ข้อควรระวัง (Precautions)</h2>
+       <ul data-role="listview" >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;การฉีดเซรุ่มอาจทำให้แพ้เมื่อฉีดซ้าอีก ฉะนั้นควรถามผู้ป่วยถึงประวัติการแพ้โดยละเอียดและทดสอบการแพ้ด้วยวิธีฉีดเข้าในผิวหนัง 0.1 mL โดยเจือจาง DAT 1:100
+            ด้วย NSS รอดูผล 20 นาที ก่อนฉีดเซรุ่มต้องเตรียมพร้อมในการที่จะแก้ไขภาวะ anaphylaxis ส่วนหลังฉีดเซรุ่ม 2-3 วันอาจเกิด serum sickness ขึ้นได้
+        	</div></ul>
+            <div data-role="collapsible" >
+        <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;เกิด serum sickness ซึ่งจะมีอาการไข้ ผื่นลมพิษ คัน ปวดข้อและต่อมน้าเหลืองโต</p>
+        	</div></ul>
+            <div data-role="collapsible" >
+        <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        <ul data-role="listview"  >
+        	<p>ไม่พบ</p>
+        	  </div></ul> 
+               <div data-role="collapsible" >       
+       <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;DAT ผสมใน NSS 250-500 mL ให้ทางหลอดเลือดดำในเวลา 	2-4 ชั่วโมง โดยมีขนาดที่แนะนำ ดังนี้	<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;- Pharyngeal or laryngeal disease of 2 days duration: 20,000-40,000 units<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;- Nasopharyngeal disease: 40,000-60,000 units<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;- Systemic disease of 3 or more days duration or any patient with diffuse swelling of the neck: 80,000-100,000 units<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;- Skin lesions only: 20,000-40,000 units<br />
+		โดยขนาดยาที่ใช้ในเด็กเท่ากับที่ใช้ในผู้ใหญ่ และไม่แนะนำให้ซ้ำ
+            </p>
+           </div></ul> 
+            <div data-role="collapsible" >
+        <h2>รูปแบบของยา (Formulation)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;ขวดละ 10,000 unit ต่อ 10 mL</p>
+        	</div></ul>
+
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Diphtheria Antitoxin (DAT)',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+</body>
+</html>

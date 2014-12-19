@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+    <h1>Drug detail</h1>
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content">
+    <div align="center"><p><b>Calcium disodium EDTA (CaNa<sub>2</sub>EDTA)</p></b></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+        <h2>ข้อบ่งใช้ (Indications)</h2>
+         <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. ใช้รักษาภาวะพิษจากตะกั่วเป็นหลัก<br />
+				&nbsp;&nbsp;&nbsp;2. ใช้วินิจฉัยภาวะตะกั่วเป็นพิษ (EDTA mobilization test)
+            </p>
+            </div></ul>
+			 <div data-role="collapsible" >
+        <h2>ข้อห้ามใช้ (Contraindications)</h2>
+         <ul data-role="listview"  >
+        	<p>ภาวะตับหรือไตวายขั้นรุนแรง</p>
+            </div></ul>
+        	 <div data-role="collapsible" >
+        <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+         <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. คลื่นไส้ อาเจียน ปวดเมื่อยกล้ามเนื้อ ปวดศีรษะ<br />
+				&nbsp;&nbsp;&nbsp;2. ความดันโลหิตลดลง<br />
+				&nbsp;&nbsp;&nbsp;3. ปวดบริเวณที่ได้รับการฉีดยา กรณีบริหารยาโดยการฉีดเข้ากล้ามเนื้อ<br />
+				&nbsp;&nbsp;&nbsp;4. ภาวะขาดสังกะสี กรณีที่ให้ยาเป็นระยะเวลานาน</p>
+                </div></ul>
+        	 <div data-role="collapsible" >
+         <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+         <ul data-role="listview"  >
+        	<p>ไม่พบ</p>
+            </div></ul>
+        	       <div data-role="collapsible" >    
+         <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+         <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. ภาวะตะกั่วเป็นพิษ ขนาดยาที่ใช้ คือ 1000-1500 mg/m<sup>2</sup>/day หรือ 50-75 mg/kg/day	 แต่ไม่เกิน 2 g/day โดยแบ่ง
+ให้ 2-3 ครั้งต่อวันโดยหยดทางหลอดเลือดดำช้าๆ นานกว่า	&nbsp;1 ชั่วโมงต่อครั้ง 
+หรือให้เป็นแบบหยดต่อเนื่องก็ได้ ให้ยาติดต่อกันนาน 5 วัน สามารถให้ซ้าได้ ถ้าผู้ป่วยยังมีระดับตะกั่วสูงอยู่ แต่ต้องเว้นระยะจากการให้รอบแรกอย่างน้อย 2 วัน<br />
+				&nbsp;&nbsp;&nbsp;กรณีผู้ป่วยเป็นหรือสงสัยว่าเป็น lead encephalopathy ต้องให้ยา  dimercaprol ก่อนยา CaNa<sub>2</sub>EDTA  4  ชั่วโมง<br />
+				&nbsp;&nbsp;&nbsp;2. EDTA	 mobilization test ใช้ขนาดยาเพียง ½ เท่าของการรักษาและให้ครั้งเดียว</p>
+                </div></ul>
+             <div data-role="collapsible" >
+         <h2>รูปแบบของยา (Formulation)</h2>
+         <ul data-role="listview"  >
+        	<p>สารละลายหลอดละ 1000 mg/5 mL (200	mg/mL)</p>
+            </div></ul>
+
+               <div data-role="collapsible" >
+         <h2>คำนวณปริมาณการให้ยา (Calculate)</h2>
+                   <ul data-role="listview"  ></ul>
+                       <li class="ui-field-contain" >
+                           <span><label for="dropdown">ปริมาณ Calcium disodium EDTA (mg):</label></span>
+                           <select id="dropdown" name="dropdown" data-native-menu="false" data-mini="true" >
+
+                               <option  value="50">50 mg</option>
+                               <option  value="55">55 mg</option>
+                               <option  value="60">60 mg</option>
+                               <option  value="65">65 mg</option>
+                               <option  value="70">70 mg</option>
+                               <option  value="75">75 mg</option>
+                           </select>
+                   <li class="ui-field-contain" >
+                       <span><label for="weight">น้ำหนัก (kg):</label>
+                       <input type="number"  min="0" step="1" id="weight" align="center" placeholder="น้ำหนัก (kg):"></span>
+            </li>
+                   <li class="ui-field-contain" >
+                      <span> <label for="result">ใช้ยาปริมาณ (mg/day):</label>
+                       <div align="center" id="result" name="result"></span>
+
+                           <li class="ui-field-contain" >
+                   <span><div align="center"><FONT COLOR=red >*ไม่ควรให้ยาเกิน 2000 mg/day</FONT></div></span>
+                   <li class="ui-field-contain" >
+                       <button id="submit"  data-mini="true" >Submit</button>
+
+                   <li class="ui-field-contain" >
+                       <div align="center" data-role="main" class="ui-content" >
+                           <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info ui-corner-all">info</a>
+
+                           <div data-role="popup" id="myPopup" >
+                               <p> สูตร = ปริมาณ Calcium disodium EDTA (mg) x น้ำหนัก (kg)</p>
+                           </div>
+                       </div>
+
+
+        <script>
+
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var drop = $("#dropdown").val();
+                    var weight = $("#weight").val();
+                    var max = 2000;
+                    (drop * weight);
+                    if((drop * weight)>=2000) {
+                        $('#result').html(max);
+                    }else {
+                        $('#result').html( drop * weight );
+                    }
+                });
+            });
+        </script>
+    </div></ul>
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Calcium disodium EDTA (CaNa2EDTA)',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+</body>
+</html>

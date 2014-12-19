@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="themes/themenew.min.css" />
+	<link rel="stylesheet" href="themes/themenew.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="1.11.1.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
+	<script>
+				$("#drugList li #deleteList").on("click",function(){
+        $(this).parent("li").remove();
+    });</script>
+</head>
+
+<body>
+	<div data-role="page" align="center">
+
+		<div data-role="header" data-position="fixed">
+
+			<p>Favorite</p>
+		</div>
+		<div data-role="content">
+			<form class="ui-filterable">
+				<input id="rich-autocomplete-input" data-type="search" placeholder="Search for name">
+			</form>
+			<ul id="drugList" data-role="listview"  data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" rel="external" data-icon="search">Name</a>
+					</li>
+					<li><a href="search_poison.html" rel="external" data-icon="search">Poison</a>
+					</li>
+					<li><a href="favorite.html" rel="external" data-icon="star">Favorites</a>
+					</li>
+                    <li><a href="map3.html" rel="external" data-icon="location">Hospital</a></li>
+					</li>
+					<li><a href="ContactCenter.html" rel="external" data-icon="info">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<script>
+							for (var i=0;i<localStorage.length;i++) {
+									$('#drugList').append($('<li/>', { //here appending `<li>`
+									}).append($('<a/>', { //here appending `<a>` into `<li>`
+										'href': 'antidote/'+localStorage.getItem(localStorage.key(i)),
+										'data-transition': 'slide',
+										'text': localStorage.key(i),
+										'rel': 'external',
+										'data-split-icon':'star'
+									})).append('<a data-icon="delete" id="deleteList"></a>'));
+						}
+						//$("#drugList").listview('refresh')
+						
+				$("#drugList li #deleteList").on("click",function(){
+					$(this).parent("li").remove();
+					localStorage.removeItem($(this).parent().find('a[data-transition=slide]').html());
+					
+				});
+				
+			</script>
+</body>
+
+</html>

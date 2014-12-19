@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+    <h1>Drug detail</h1>
+    	
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content">
+       <div align="center"><p><b>Glucagon</b></p></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+        <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;ภาวะพิษจาก beta-adrenergic antagonist และ calciumchannel blocker ใช้ในการรักษาภาวะความดันโลหิตต่ำที่เกิดร่วมกับภาวะหัวใจเต้นช้า<br />
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;สำหรับ 	calcium channel blocker ควรเริ่มให้กลูคากอนเมื่อได้ให้การรักษาด้วยแคลเซียมทางหลอดเลือดดำอย่างเต็มที่แล้ว</p>
+			</div></ul>
+            <div data-role="collapsible" >
+       <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        <ul data-role="listview"  >
+        	<p>ผู้ที่มีประวัติแพ้ยากลูคากอน</p>
+            </div></ul>
+        	<div data-role="collapsible" >
+       <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;1. อาการคลื่นไส้และอาเจียน<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;2. ภาวะ hypokalemia<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;3. ภาวะ hyperglycemia หรือ hypoglycemia ส่วนใหญ่จะเกิดภาวะ hyperglycemia ที่มักไม่รุนแรงและไม่ต้องการการรักษาเพิ่มเติม</p>
+        	</div></ul>
+            <div data-role="collapsible" >
+       <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;อาจทำให้เกิดการเสริมฤทธิ์ของ warfarin ในผู้ป่วยที่ได้รับอยู่และทำให้ PT และ INR สูงมากขึ้นได้</p>
+        	  </div></ul>   
+                 <div data-role="collapsible" >     
+        <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;เริ่มที่ 3-5 mg (50 mcg/kg ในเด็ก) ต่อครั้งและอาจเพิ่มเป็น 5-10 mg ต่อครั้งทางหลอดเลือดดำ 	หากผู้ป่วยไม่ตอบสนองในทางที่ดีขึ้นใน 3-5 นาทีอาจเพิ่มขนาดและบริหารซ้ำจนดีขึ้น<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;เมื่อผู้ป่วยมีอาการดีขึ้นแล้วควรบริหารยาต่อโดยการหยดทางหลอดเลือดดำในอัตรา 2	-10 mg ต่อชั่วโมง ระยะเวลาในการรักษาด้วยกลูคากอนมักใช้เวลาอย่างน้อย 24 ชั่วโมง แล้วจากนั้นให้ลดขนาดยาลง โดยดูอาการและสัญญาณชีพของผู้ป่วยอย่างใกล้ชิด เช่น ตรวจทุก 1-2 ชั่วโมง ในช่วง 2-4 ชั่วโมงแรก
+            </p></div></ul>
+            
+            <div data-role="collapsible" >
+        <h2>รูปแบบของยา (Formulation)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;ยาอยู่ในรูปผงแห้ง 1 ขวดเล็ก มีกลูคากอน 1 mg โดยมีตัวทำละลาย เป็น glycerin และ hydrochloric acid 1 mL แยกมาด้วย</p>
+            </div></ul>
+
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Glucagon',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+</body>
+</html>

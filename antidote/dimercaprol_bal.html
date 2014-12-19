@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+    <h1>Drug detail</h1>
+    	
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content">
+     <div align="center"><p><b>Dimercaprol (BAL)</p></b></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+        <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;ใช้เป็นยาต้านพิษจากโลหะ ได้แก่ สารหนู ปรอท สำหรับ	ผู้ป่วยที่เป็นพิษจากตะกั่ว มักจะใช้ dimercaprol เป็นยาต้านพิษร่วมกับการใช้ CaNa<sub>2</sub>EDTA
+            </p>
+			 </div></ul>
+             <div data-role="collapsible" >
+      <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. ภาวะเป็นพิษจากเหล็ก แคดเมี่ยม เซเลเนี่ยม เทลลูเรี่ยม<br />
+                &nbsp;&nbsp;&nbsp;2. ภาวะตับหรือไตวายขั้นรุนแรง</p>
+        	 </div></ul>
+             <div data-role="collapsible" >
+       <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. คลื่นไส้ อาเจียน ปวดศีรษะ<br />
+                &nbsp;&nbsp;&nbsp;2. ปวดกล้ามเนื้อ<br />
+                &nbsp;&nbsp;&nbsp;3. ความดันโลหิตสูง ชีพจรเต้นเร็ว<br />
+                &nbsp;&nbsp;&nbsp;4. ปวดบริเวณที่ได้รับการฉีดยา</p>
+        	 </div></ul>
+             <div data-role="collapsible" >
+        <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        <ul data-role="listview"  >
+        	<p>ไม่พบ</p>
+        	 </div></ul>
+             <div data-role="collapsible" >          
+        <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        <ul data-role="listview"  >
+        	<p><U>พิษจากสารห</U>นู:<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;2.5 mg/kg ทุก 4 ชั่วโมงในวันแรกและทุก 4-6 ชั่วโมงในวันที่สอง ทุก 12 ชั่วโมงในวันที่สาม จากนั้นให้ยาวันละครั้ง	นาน 10 วัน หรือจนตรวจปัสสาวะพบสารหนูน้อยกว่า 50 mcg/day<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;ในรายที่มีอาการรุนแรง เริ่มให้ยา 5 mg/kg แล้วค่อย ๆ ลดขนาดลงจนเป็น 2.5 mg/kg วันละครั้ง<br />
+				<U>พิษจากปรอท:</U><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;2.5-5 mg/kg ในครั้งแรกต่อด้วย 2.5 mg/kg ทุก 4-6 ชั่วโมง ใน 1-2 วัน แล้วลดขนาดลงเป็นวันละครั้งนาน 7-10 วัน
+            </p>
+             </div></ul>
+             <div data-role="collapsible" >
+        <h2>รูปแบบของยา (Formulation)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;&nbsp;เป็นยาฉีดเข้ากล้ามเนื้อผสมในน้ำมัน 	หลอดละ 100 mg/2 mL (50 mg/mL)</p>
+        	 </div></ul>
+               <div data-role="collapsible" >
+        <h2>คำนวณปริมาณการให้ยา (Calculate)</h2>
+                   <ul data-role="listview"  ></ul>
+
+                                 <li class="ui-field-contain">
+                              <span><label for="dropdown">ปริมาณ Dimercaprol (mg) :</label>
+                               <select id="dropdown" name="dropdown" data-native-menu="false"  data-mini="true" >
+                                   <option  value="2.5">2.5 mg</option>
+                                   <option  value="5" >5 mg</option>
+                               </select></span>
+                               <li class="ui-field-contain" >
+                               <span><label for="weight">น้ำหนัก (kg):</label>
+                                   <input type="number"  min="0"  id="weight" align="center" placeholder="น้ำหนัก (kg)"></span>
+
+                               <li class="ui-field-contain" >
+                                 <span>  <label for="result">ใช้ยาปริมาณ (mg):</label>
+                                   <div align="center" id="result" name="result"></span>
+
+                                       <li class="ui-field-contain" >
+                               <button id="submit" data-mini="true">Submit</button>
+
+                   <li class="ui-field-contain" >
+                       <div align="center" data-role="main" class="ui-content" >
+                           <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info ui-corner-all">info</a>
+
+                           <div data-role="popup" id="myPopup" >
+                               <p> สูตร = ปริมาณ Dimercaprol (mg) x น้ำหนัก (kg)</p>
+                           </div>
+                       </div>
+
+                               <script>
+                                   $(document).ready(function(){
+                                       $("#submit").click(function(){
+                                           var drop = $("#dropdown").val();
+                                           var weight = $("#weight").val();
+                                           $('#result').html(drop * weight);
+                                       });
+                                   });
+                               </script>
+                           </div></ul>
+    </div>
+</div>
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Dimercaprol (BAL)',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,user-scalable=yes" />
+    <link rel="stylesheet" href="../themes/themenew.min.css" />
+    <link rel="stylesheet" href="../themes/themenew.css" />
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="../themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="../1.11.1.js"></script>
+    <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+	<div data-role="header" data-position="fixed">
+        <h1>Drug detail</h1>
+        <a href="#" data-rel="back" data-inline="true" class="ui-btn-left" data-icon="arrow-l">Back</a>
+      	<a href="#" id="fav" data-icon="star" data-inline="true" class="ui-btn-right">Favorite</a>
+    </div>
+    
+    <div data-role="content">
+    <div align="center"><p><b>Succimer (DMSA)</b></p></div>
+    <div class="content" data-role="content">
+           <div data-role="collapsible-set">   
+          <div data-role="collapsible" >
+        <h2>ข้อบ่งใช้ (Indications)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;ใช้เป็นยาต้านพิษจากตะกั่ว ปรอท และสารหนู แต่โดยส่วนใหญ่มักจะใช้รักษาภาวะพิษจากตะกั่วในเด็ก</p>
+        </ul></div>
+             <div data-role="collapsible" >
+       <h2>ข้อห้ามใช้ (Contraindications)</h2>
+        <ul data-role="listview"  >
+        	<p>ผู้ป่วยที่มีประวัติแพ้ยา succimer</p>
+        </ul></div>
+        	 <div data-role="collapsible" >
+        <h2>อาการอันไม่พึงประสงค์จากยา (Adverse reactions)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;1. ปวดท้อง คลื่นไส้ อาเจียน<br />
+                &nbsp;&nbsp;&nbsp;2. ความผิดปกติของเอ็นไซม์ตับ<br />
+                &nbsp;&nbsp;&nbsp;3. ผื่นลมพิษ</p>
+        </ul></div>
+             <div data-role="collapsible" >
+       <h2>ปฏิกิริยาต่อยาอื่น (Drug interaction)</h2>
+        <ul data-role="listview"  >
+        	<p>ไม่พบ</p>
+        </ul> </div>
+              <div data-role="collapsible" >         
+       <h2>ขนาดและวิธีใช้ (Dosage and administrations)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;<U>เด็กอายุน้อยกว่า 5 ปี:</U><br />
+                &nbsp;&nbsp;&nbsp;ขนาดยาที่ใช้คือ 350 mg/m<sup>2</sup>(พื้นที่ผิวกาย) ให้กิน 3 ครั้งต่อวัน จนครบ 5 วัน แล้วลดเหลือ 2 ครั้งต่อวัน ไปจนครบ 14 วัน<br />
+				<p>&nbsp;&nbsp;&nbsp;<U>อายุ 5 ปี ขึ้นไป:</U><br />
+            &nbsp;&nbsp;&nbsp;ให้ขนาด 10 mg/kg กิน 3 ครั้งต่อวัน จนครบ 5 วัน แล้วลดเหลือ 2 ครั้งต่อวัน จนครบ 14 วัน<br />
+            &nbsp;&nbsp;&nbsp;การให้ยานี้ในเด็กสามารถเปิดแคปซูลเพื่อนำยาผสมกับอาหารอ่อน	&nbsp;น้ำผลไม้	&nbsp;หรือไอศกรีมเพื่อให้กินได้ง่ายขึ้น
+                 </p>
+            </p>
+        </ul></div>
+             <div data-role="collapsible" >
+       <h2>รูปแบบของยา (Formulation)</h2>
+        <ul data-role="listview"  >
+        	<p>&nbsp;&nbsp;&nbsp;เป็นแคปซูลขนาด 100	&nbsp;mg หรือ 200 mg ภายในบรรจุเม็ดยาที่เป็นทรงกลมเล็กๆ ซึ่งสามารถเทออกได้</p>
+        </ul></div>
+
+
+
+
+
+               <div data-role="collapsible" >
+                   <h2>คำนวณปริมาณการให้ยา (Calculate)</h2>
+                    <li class="ui-field-contain">
+                         <div data-role="collapsible" >
+                               <h3>1. เด็กอายุน้อยกว่า 5 ปี</h3>
+                           <ul data-role="listview" >
+                               <li class="ui-field-contain">
+                      <span> <label for="weight">น้ำหนัก (kg) :</label>
+                           <input type="number" min="0" name="weight" id="weight" placeholder="น้ำหนัก (kg)"></span>
+                        </li>
+                       <li class="ui-field-contain">
+                          <span> <label for="height">ส่วนสูง (cm) :</label>
+                           <input type="number" min="0" name="height" id="height" placeholder="ส่วนสูง (cm)"></span>
+                       </li>
+                       <li class="ui-field-contain" >
+                        <span>   <label for="result">ใช้ยาปริมาณ (ขวด) :</label>
+                           <div align="center" id="result"name="result" ></div></span>
+                       </li>
+                       <li class="ui-field-contain" >
+                           <button id="submit" data-mini="true">Submit</button>
+                       </li>
+                               <li class="ui-field-contain" >
+                                   <div align="center" data-role="main" class="ui-content">
+                                       <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info ui-corner-all">info</a>
+
+                                       <div data-role="popup" id="myPopup">
+                                           <p>สูตร = &radic;<span style="text-decoration: overline">(น้ำหนัก*ส่วนสูง)/3600)</span>*350</p>
+                                       </div>
+                                   </div>
+
+                               </ul>
+
+                           </div>
+                            </li>
+
+
+
+
+                           <script>
+                               $(document).ready(function(){
+                                   $("#submit").click(function(){
+                                       var weight = $("#weight").val();
+                                       var height = $("#height").val();
+                                       $('#result').html(Math.ceil(Math.sqrt((weight*height)/3600)*350));
+                                   });
+                               });
+                           </script>
+
+               <div data-role="collapsible" >
+                   <h3>2. อายุ 5 ปี ขึ้นไป</h3>
+                   <ul data-role="listview"  >
+
+                        <li class="ui-field-contain">
+                          <span> <label for="weight2">น้ำหนัก (kg) :</label>
+                           <input type="number" min="0" name="weight2" id="weight2" placeholder="น้ำหนัก (kg)"></span>
+</li>
+                        <li class="ui-field-contain" >
+                         <span>  <label for="result2" >ใช้ยาปริมาณ (ขวด) :</label>
+                           <div align="center" id="result2" name="result2"></div></span>
+                        </li>
+                            <li class="ui-field-contain" >
+                            <button id="submit2" data-mini="true">Submit</button>
+                            </li>
+                       <li class="ui-field-contain" >
+                           <div align="center" data-role="main" class="ui-content">
+                               <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info ui-corner-all">info</a>
+
+                               <div data-role="popup" id="myPopup2">
+                                   <p> สูตร = 10 x น้ำหนัก (kg)</p>
+                               </div>
+                           </div>
+
+
+                           <script>
+                               $(document).ready(function(){
+                                   $("#submit2").click(function(){
+                                       var weight2 = $("#weight2").val();
+                                       $('#result2').html(weight2*10);
+                                   });
+                               });
+                           </script>
+
+
+
+
+<script>
+		$('#fav').click(function() {
+			localStorage.setItem('Succimer (DMSA)',location.pathname.substring(location.pathname.lastIndexOf("/") + 1)); 
+		});
+		</script>
+                       </ul></div></div>
+                        </li>
+                        </ul>
+                   </div>
+               </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place searches</title>
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="stylesheet" href="themes/themenew.min.css" />
+    <link rel="stylesheet" href="themes/themenew.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="1.11.1.js"></script>
+    <script src="js/jquery.mobile-1.4.4.min.js"></script>
+   <style>
+      #map {
+    width: 600px;
+    height: 600px;
+    background-color: red;
+}
+    </style>
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+    <script>
+	 $( document ).ready(function() {
+      var infowindow,
+      placemarkers = [];
+
+
+      function placeSearch(map, request) {
+          var map = map;
+          var service = new google.maps.places.PlacesService(map);
+          service.search(request,
+
+          function (results, status) {
+              if (status == google.maps.places.PlacesServiceStatus.OK) {
+                  var bounds = new google.maps.LatLngBounds();
+                  for (var i = 0; i < results.length; ++i) {
+                      bounds.extend(results[i].geometry.location);
+                      placemarkers.push(createMarker(results[i].geometry.location,
+                      map,
+                          'http://labs.google.com/ridefinder/images/mm_20_orange.png',
+                      results[i].name,
+                      false, {
+                          fnc: function () {
+                              infowindow.open();
+                          }
+
+                      }));
+                  }
+                  map.fitBounds(bounds);
+              }
+          });
+
+      }
+
+      function createMarker(latlng, map, icon, content, center, action) {
+
+
+          var marker = new google.maps.Marker({
+              map: map,
+              position: latlng,
+              content: content
+          });
+          if (icon) {
+              marker.setIcon(icon);
+          }
+
+          if (center) {
+              map.setCenter(latlng);
+          }
+
+          google.maps.event.addListener(marker, 'click', function () {
+              infowindow.setContent(this.content);
+              infowindow.open(map, this);
+          });
+
+          if (action) {
+              action.fnc(map, action.args);
+          }
+          return marker;
+      }
+
+      function initialize() {
+
+          var location = new google.maps.LatLng(-33.8665433, 151.1956316),
+              map = new google.maps.Map(document.getElementById('map'), {
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  center: location,
+                  zoom: 15
+              });
+          infowindow = new google.maps.InfoWindow();
+          navigator.geolocation.getCurrentPosition(function (place) {
+              createMarker(
+              new google.maps.LatLng(place.coords.latitude,
+              place.coords.longitude),
+              map,
+              null,
+                  'your current position',
+              true, {
+                  fnc: placeSearch,
+                  args: {
+                      radius: 3000,
+                      types: ['hospital'],
+                      location: new google.maps.LatLng(place.coords.latitude,
+                      place.coords.longitude)
+                  }
+              });
+          });
+      }
+initialize()
+google.maps.event.addDomListener(window, 'load', initialize);
+  });
+
+    </script>
+  </head>
+  <body>
+   <div data-role="page" id="page3" align="center">
+    	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+ <h1>Map</h1></div>
+<div id="map" ></div>
+          <div data-role="footer" data-position="fixed">
+    	<div data-role="navbar">
+        	<ul>
+            <li><a href="index.html" rel="external" data-icon="search">Name</a></li>
+             <li><a href="search_poison.html" rel="external" data-icon="search">Poison</a></li>
+              <li><a href="favorite.html" rel="external" data-icon="star">Favorites</a></li>
+                <li><a href="map3.html" rel="external" data-icon="location">Hospital</a></li>
+              <li><a href="ContactCenter.html" rel="external" data-icon="info">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
